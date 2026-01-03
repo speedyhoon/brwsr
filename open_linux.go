@@ -5,7 +5,7 @@ import "os/exec"
 func Open(url string) (err error) {
 	err = exec.Command("xdg-open", url).Start()
 	if err != nil {
-		return Err
+		return ErrOpen
 	}
 
 	return

@@ -6,9 +6,9 @@ import (
 )
 
 func TestErr(t *testing.T) {
-	const errMsg = "unable to open web browser for URL"
+	const expectErr = "open failed"
 
-	if errMsg != brwsr.Err.Error() {
-		t.Errorf("error message is wrong,\nwant: `%s`,\n  got: `%s`", errMsg, brwsr.Err)
+	if expectErr != brwsr.ErrOpen.Error() {
+		t.Errorf("error message is wrong,\nwant: `%s`,\n  got: `%s`", expectErr, brwsr.ErrOpen)
 	}
 }

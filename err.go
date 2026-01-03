@@ -3,4 +3,5 @@ package brwsr
 
 import "errors"
 
-var Err = errors.New("unable to open web browser for URL")
+// ErrOpen is unable to open the default web browser for a URL.
+var ErrOpen = errors.New("open failed")
